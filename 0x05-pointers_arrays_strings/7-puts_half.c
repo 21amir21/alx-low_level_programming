@@ -12,7 +12,6 @@ int ilongy = 0;
 char *y = str;
 int j;
 int n;
-
 while (*y != '\0')
 {
 y++;
