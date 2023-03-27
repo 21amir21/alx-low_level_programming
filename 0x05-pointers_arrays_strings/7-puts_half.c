@@ -15,7 +15,7 @@ while (*y != '\0')
 {
 y++;
 ilongy++;
-} 
+}
 n = (ilongy - 1) / 2;
 if (ilongy % 2 != 0)
 {
