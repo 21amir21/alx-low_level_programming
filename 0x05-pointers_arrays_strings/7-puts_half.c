@@ -7,7 +7,6 @@
  */
 void puts_half(char *str)
 {
-
 int ilongy = 0;
 char *y = str;
 int j;
