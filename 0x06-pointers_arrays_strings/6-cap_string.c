@@ -5,7 +5,7 @@
  *
  * Return: A pointer to the changed string.
  */
-char *cap_string(char *n)
+char *cap_string(char *str)
 {
 int index = 0;
 while (str[index])
