@@ -20,7 +20,7 @@ if (s[i] != c)
 {
 s++;
 }
-else 
+else
 {
 return (s);
 }
