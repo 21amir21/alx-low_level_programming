@@ -39,7 +39,7 @@ for argument in "$@" ; do
     ${BIN_PATH}/${BETTY_DOC} "$argument"
 done
 ```
-- Once saved, exit file and change permissions to apply to all users with command `chmod a+x betty`
-- Move the `betty` file into `/bin/` directory or somewhere else in your `$PATH` with command `sudo mv betty /bin/`
+- Once saved, exit file and change permissions to apply to all users with `chmod a+x betty`
+- Move the `betty` file into `/bin/` directory or somewhere else in your `$PATH` with `sudo mv betty /bin/`
 
 you can now type `betty <filename>` to run the Betty linter
