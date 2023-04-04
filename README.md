@@ -14,7 +14,7 @@ To run betty linter with command `betty <filename>` :
 - Go to the [Betty](https://github.com/holbertonschool/Betty) repository
 - Clone the repo to local machine.
 - `cd` into Betty directory
-- Install the linter with command `sudo ./install.sh`
+- Install the linter with `sudo ./install.sh`
 - copy the script below into editor;
 
 ```bash
