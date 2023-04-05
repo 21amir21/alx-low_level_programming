@@ -1,7 +1,7 @@
 # ALX - Low Level Programming
 
 if you think what a terrible indentation remember I used the betty linter in this repo (pretty ~~stupid~~ sick right!)
-still working on how to use it right.
+~~still working on how to use it right~~, figured how to use them right and going to fix these indentation later on.
 
 go checkout [Betty-wiki](https://github.com/holbertonschool/Betty/wiki)
 
