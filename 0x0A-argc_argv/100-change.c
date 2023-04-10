@@ -10,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int cent, counter;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
