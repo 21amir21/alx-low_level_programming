@@ -10,9 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-	(void)argv;
-
 	int i;
+
+	(void)argv;
 
 	for (i = 0; i < argc; i++)
 	{
