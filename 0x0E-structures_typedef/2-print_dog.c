@@ -2,11 +2,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * print_dog - prints a struct dog
+ * @d: struct dog to print
+ */
+
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
 	{
-		d = malloc(sizeof(struct dog));
+		return;
 	}
 
 	if (d->name == NULL)
