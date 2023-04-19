@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * get_op_func - function that performs simple operations
+ * @s: takes in a operator in string
+ * Return: function pointer
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
