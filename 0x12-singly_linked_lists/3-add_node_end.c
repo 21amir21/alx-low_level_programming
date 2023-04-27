@@ -28,29 +28,41 @@ unsigned int _strlen(char *str)
 list_t *add_node_end(list_t **head, const char *str)
 {
 
-	list_t *new, *tmp;
+	list_t *new_node;
+	list_t *mr_robot;
 
-	if (str == NULL)
-		return (NULL);
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
-		return (NULL);
-	new->str = strdup(str);
-	if (new->str == NULL)
+	new_node = malloc(sizeof(list_t));
+
+	if (new_node == NULL)
 	{
-		free(new);
 		return (NULL);
 	}
-	new->len = _strlen(new->str);
-	new->next = NULL;
+
+	new_node->str = strdup(str);
+
+	if (new_node->str == NULL)
+	{
+		free(new_node);
+		return (NULL);
+	}
+
+	new_node->len = _strlen(str);
+
 	if (*head == NULL)
 	{
-		*head = new;
-		return (new);
+		*head = new_node;
+		new_node->next = NULL;
 	}
-	tmp = *head;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp->next = new;
-	return (new);
+
+	mr_robot = *head;
+
+	while (mr_robot->next != NULL)
+	{
+		mr_robot = mr_robot->next;
+	}
+
+	mr_robot->next = new_node;
+	new_node->next = NULL;
+
+	return (new_node);
 }
