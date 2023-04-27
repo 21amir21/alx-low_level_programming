@@ -1,5 +1,4 @@
-#include "list.h"
-#include <string.h>
+#include "lists.h"
 
 /**
  * _strlen - finds the length of a string
@@ -28,41 +27,38 @@ unsigned int _strlen(char *str)
 list_t *add_node_end(list_t **head, const char *str)
 {
 
-	list_t *new_node;
-	list_t *mr_robot;
+	list_t *new, *tmp;
 
-	new_node = malloc(sizeof(list_t));
+	if (str == NULL)
+		return (NULL);
 
-	if (new_node == NULL)
+	new = malloc(sizeof(list_t));
+
+	if (new == NULL)
+		return (NULL);
+
+	new->str = strdup(str);
+
+	if (new->str == NULL)
 	{
+		free(new);
 		return (NULL);
 	}
 
-	new_node->str = strdup(str);
-
-	if (new_node->str == NULL)
-	{
-		free(new_node);
-		return (NULL);
-	}
-
-	new_node->len = _strlen(str);
+	new->len = _strlen(new->str);
+	new->next = NULL;
 
 	if (*head == NULL)
 	{
-		*head = new_node;
-		new_node->next = NULL;
+		*head = new;
+		return (new);
 	}
 
-	mr_robot = *head;
+	tmp = *head;
+	while (tmp->next)
+		tmp = tmp->next;
 
-	while (mr_robot->next != NULL)
-	{
-		mr_robot = mr_robot->next;
-	}
+	tmp->next = new;
 
-	mr_robot->next = new_node;
-	new_node->next = NULL;
-
-	return (new_node);
+	return (new);
 }
