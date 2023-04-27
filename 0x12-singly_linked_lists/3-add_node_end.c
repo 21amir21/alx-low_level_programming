@@ -1,4 +1,5 @@
 #include "list.h"
+#include <string.h>
 
 /**
  * _strlen - finds the length of a string
@@ -7,13 +8,12 @@
  */
 unsigned int _strlen(char *str)
 {
-	unsigned int i;
+	int i = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i] != '\0')
 	{
-		continue;
+		i++;
 	}
-
 	return (i);
 }
 
