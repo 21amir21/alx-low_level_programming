@@ -7,11 +7,11 @@
  */
 unsigned int _strlen(char *str)
 {
-	unsigned int i = 0;
+	unsigned int i;
 
-	while (str[i] != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		i++;
+		continue;
 	}
 
 	return (i);
